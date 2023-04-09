@@ -5,13 +5,13 @@
 function solution(hp) {
     let answer = 0;
     
-    answer = parseInt(hp / 5);
+    answer = Math.floor(hp / 5);
     hp = hp % 5;
      
-    answer += parseInt(hp / 3);
+    answer += Math.floor(hp / 3);
     hp = hp % 3;
     
-    answer += parseInt(hp / 1);
+    answer += Math.floor(hp / 1);
     hp = hp % 1;
     
     return answer;

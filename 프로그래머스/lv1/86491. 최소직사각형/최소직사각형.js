@@ -1,7 +1,8 @@
 function solution(sizes) {
     const arr = [];
     for(const values of sizes){
-        arr.push(values.sort((a,b) => a-b))
+        values[0] > values[1] ? arr.push([values[0], values[1]]) : arr.push([values[1], values[0]])
+        //arr.push(values.sort((a,b) => a-b))
     }
     
     let max_0 = -Infinity;

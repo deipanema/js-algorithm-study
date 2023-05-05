@@ -1,4 +1,3 @@
-
 function solution(X, Y) {
     const obj_X = {};
     let answer = [];
@@ -14,10 +13,5 @@ function solution(X, Y) {
         }
     }
 
-    return !answer.length ? "-1" : answer[0] === "0" ? "0" : answer.sort((a,b) => b-a).join("");
+    return !answer.length ? "-1" : Number(answer.join('')) === 0 ? "0" : answer.sort((a,b) => b-a).join("");
 }
-
-    
-    // const answer = [...Y].filter(num => [...X].includes(num));
-    // console.log(answer)
-    // return !answer.length ? "-1" : answer[0] === "0" ? "0" : answer.sort((a,b) => b-a).join("");

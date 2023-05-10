@@ -8,10 +8,8 @@ function solution(keymap, targets) {
     const map = new Map();
     
     for(let i = 0; i < keymap.length; i++){
-        keymap[i] = [...keymap[i]];
-        
         for(let j =0; j < keymap[i].length; j++){
-            if(map.has(keymap[i][j]) && map.get(keymap[i][j]) > j+1 ){    
+            if(map.get(keymap[i][j]) > j+1 ){    
                 map.set(keymap[i][j], j+1);
             }
             
@@ -23,8 +21,6 @@ function solution(keymap, targets) {
     }
     
      for(let i = 0; i < targets.length; i++){
-        targets[i] = [...targets[i]];
-        
         for(let j =0; j < targets[i].length; j++){
             if(map.has(targets[i][j])) answer[i] += map.get(targets[i][j]);
             else {
@@ -36,6 +32,3 @@ function solution(keymap, targets) {
     
     return answer.map( v => v === 0 ? -1 : v)
 }
-
-
-

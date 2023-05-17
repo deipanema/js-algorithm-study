@@ -15,12 +15,10 @@ function solution(today, terms, privacies) {
         day = day - 1;
         
         
-        
         while(12 < month){
             month = month - 12
             year = year + 1
         }
-        
         
         if(day < 1){
             day = 28 + day;
@@ -33,8 +31,6 @@ function solution(today, terms, privacies) {
         day = (day+'').padStart(2, 0);
         
         if(+`${year}${month}${day}` < +today.replaceAll('.','')) answer.push(i+1);
-        console.log(+`${year}${month}${day}`)
-        console.log(+today.replaceAll('.',''))
     }
     
     
